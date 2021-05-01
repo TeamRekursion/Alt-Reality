@@ -9,8 +9,9 @@
 <body>
 <canvas id="gameCanvas" width=1150 height=600>
     </canvas>
-<script>
     <img style="display:none" id="use" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c775db8f-9102-4611-9c7f-ec3f4a1e2c7d/dcr45hd-e0db89c0-58e9-4a94-9d4b-e2e4fd4c4756.png/v1/fill/w_400,h_400,q_80,strp/chris_hemsworth_as_shrek_by_zackmcawesome_dcr45hd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC9jNzc1ZGI4Zi05MTAyLTQ2MTEtOWM3Zi1lYzNmNGExZTJjN2RcL2RjcjQ1aGQtZTBkYjg5YzAtNThlOS00YTk0LTlkNGItZTJlNGZkNGM0NzU2LnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.jip6NvBLgoZxVc8qecqxJgRNiSdSC1Wx7pU7BzsUAvg"/>
+<script>
+    
 // wrapper for our game "classes", "methods" and "objects"
 window.Game = {};
 // Set the right viewport size for the camera
@@ -192,13 +193,20 @@ window.Game = {};
   }
 
   Player.prototype.draw = function(context, xView, yView) {
-    // draw a simple rectangle shape as our player model
-    context.save();
-    var pat = context.createPattern(img, "repeat");
-    context.fillStyle = "#25f56a";
-    // before draw we need to convert player world's position to canvas position            
-    context.fillRect((this.x - this.width / 2) - xView, (this.y - this.height / 2) - yView, this.width, this.height);
-    context.restore();
+//     // draw a simple rectangle shape as our player model
+//     context.save();
+//     var img = document.getElementById("use");
+// //   var pat = ctx.createPattern(img, direction);
+//     var pat = context.createPattern(img, "no-repeat");
+//     // context.fillStyle = "#25f56a";
+//     context.fillStyle = pat;
+//     context.fill();
+//     // before draw we need to convert player world's position to canvas position            
+    // context.fillRect((this.x - this.width / 2) - xView, (this.y - this.height / 2) - yView, this.width, this.height);
+
+context.save();
+context.restore();
+
   }
 
   // add "class" Player to our Game object
